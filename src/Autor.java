@@ -1,8 +1,8 @@
 public class Autor {
 
-    private String nome;
+    private String nomeAutorCompleto;
 
     public Autor(String nome) {
-        this.nome = nome;
+        this.nomeAutorCompleto = nome;
     }
 }

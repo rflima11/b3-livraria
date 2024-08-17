@@ -18,12 +18,21 @@ public class AutorNegocio {
         }
     }
 
-    public void obterAutores() {
+    public ArrayList<Autor> encontrarAutorPorNome(String nome) {
+        if (nome != null && !nome.isBlank()) {
+            return bancoDeDados.buscarAutorPorNome(nome);
+        }
+        throw new IllegalArgumentException("Parâmetro nome deve ser preenchido");
+    }
+
+    public ArrayList<Autor> obterAutores() {
        ArrayList<Autor> autoresSalvos = bancoDeDados.getAutores();
 
        for(Autor autor : autoresSalvos) {
            System.out.println("Nome: " + autor.getNome());
        }
+
+       return autoresSalvos;
     }
 
 }

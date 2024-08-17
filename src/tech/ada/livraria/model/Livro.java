@@ -14,4 +14,15 @@ public class Livro {
         this.autor = autor;
     }
 
+    public String getTitulo() {
+        return this.titulo;
+    }
+
+    public Autor getAutor() {
+        return this.autor;
+    }
+
+    public void setAutor(Autor autor) {
+        this.autor = autor;
+    }
 }
